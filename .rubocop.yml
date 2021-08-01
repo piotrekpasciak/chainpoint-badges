@@ -1,0 +1,60 @@
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 3.0.2
+  NewCops: disable
+  Exclude:
+    - 'tmp/**/*'
+    - 'config/**/*'
+    - 'bin/*'
+    - 'db/schema.rb'
+
+# == Metrics == #
+Metrics/MethodLength:
+  Max: 10
+
+Metrics/ClassLength:
+  Max: 100
+
+Metrics/ModuleLength:
+  Max: 100
+
+Metrics/ParameterLists:
+  Max: 5
+
+# == Layout == #
+Layout/LineLength:
+  Max: 150
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle:      table
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  ForceEqualSignAlignment: true
+
+Layout/IndentationStyle:
+  IndentationWidth: 2
+
+# == Style == #
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/CollectionMethods:
+  Enabled: true
+
+# == Disabled Cops == #
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
