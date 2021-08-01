@@ -28,6 +28,7 @@ group :test do
   gem 'factory_bot_rails', '~> 6.2'
   gem 'vcr', '~> 6.0'
   gem 'webmock', '~> 3.13'
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
