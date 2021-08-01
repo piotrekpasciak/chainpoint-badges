@@ -1,6 +1,6 @@
-feature 'HomeController' do
-  context '#index' do
-    scenario 'Unlogged user vists home page' do
+describe 'HomeController' do
+  describe '#index' do
+    it 'renders home page for unlogged user' do
       visit root_path
 
       expect(page).to have_http_status(:ok)
