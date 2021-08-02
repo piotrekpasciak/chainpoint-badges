@@ -5,9 +5,9 @@ describe SubmitBadgeForm do
     context 'when form attributes are valid' do
       let(:attributes) do
         {
-          issue_date:    Date.new(2021, 5, 1),
-          recipent_name: 'Jhon',
-          uuid:          SecureRandom.uuid
+          issue_date:     Date.new(2021, 5, 1),
+          recipient_name: 'Jhon',
+          uuid:           SecureRandom.uuid
         }
       end
 
@@ -19,9 +19,9 @@ describe SubmitBadgeForm do
     context 'when form attributes are invalid' do
       let(:attributes) do
         {
-          issue_date:    Date.new(2021, 5, 1),
-          recipent_name: nil,
-          uuid:          SecureRandom.uuid
+          issue_date:     Date.new(2021, 5, 1),
+          recipient_name: nil,
+          uuid:           SecureRandom.uuid
         }
       end
 

@@ -13,7 +13,7 @@ describe 'BadgesController' do
         visit new_badge_path
 
         fill_in 'submit_badge_form_issue_date', with: '21/08/2021'
-        fill_in 'submit_badge_form_recipent_name', with: 'Jhon'
+        fill_in 'submit_badge_form_recipient_name', with: 'Jhon'
         fill_in 'submit_badge_form_uuid', with: 'INVALID_UUID'
 
         click_on 'Submit to Chainpoint'
@@ -29,7 +29,7 @@ describe 'BadgesController' do
         visit new_badge_path
 
         fill_in 'submit_badge_form_issue_date', with: '21/08/2021'
-        fill_in 'submit_badge_form_recipent_name', with: 'Jhon'
+        fill_in 'submit_badge_form_recipient_name', with: 'Jhon'
         fill_in 'submit_badge_form_uuid', with: 'Ia8254e2f-6f05-4ee4-b038-2997553f8a94'
 
         click_on 'Submit to Chainpoint'

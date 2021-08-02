@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_02_162837) do
+ActiveRecord::Schema.define(version: 2021_08_02_220005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "badges", force: :cascade do |t|
-    t.string "recipent_name", null: false
+    t.string "recipient_name", null: false
     t.date "issue_date", null: false
     t.uuid "uuid", null: false
     t.uuid "proof_id", null: false

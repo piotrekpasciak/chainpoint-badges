@@ -1,9 +1,9 @@
 class SubmitBadgeForm
   include ActiveModel::Model
 
-  attr_accessor :issue_date, :recipent_name, :uuid
+  attr_accessor :issue_date, :recipient_name, :uuid
 
-  validates :issue_date, :recipent_name, :uuid, presence: true
+  validates :issue_date, :recipient_name, :uuid, presence: true
   validates :uuid, uuid: true
 
   def save
