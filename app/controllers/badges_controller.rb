@@ -16,6 +16,6 @@ class BadgesController < ApplicationController
   private
 
   def submit_badge_form_params
-    params.require(:submit_badge_form).permit(:issue_date, :recipent_name, :uuid)
+    params.require(:submit_badge_form).permit(:issue_date, :recipient_name, :uuid)
   end
 end
