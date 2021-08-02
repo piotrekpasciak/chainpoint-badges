@@ -3,7 +3,7 @@
 FactoryBot.factories.map(&:name).each do |factory_name|
   describe "#{factory_name.capitalize} factory" do
     it 'is valid' do
-      build(factory_name).should be_valid
+      expect(build(factory_name)).to be_valid
     end
   end
 end

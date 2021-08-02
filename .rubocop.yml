@@ -12,6 +12,8 @@ AllCops:
 # == Metrics == #
 Metrics/MethodLength:
   Max: 10
+  Exclude:
+    - 'db/migrate/*'
 
 Metrics/ClassLength:
   Max: 100
