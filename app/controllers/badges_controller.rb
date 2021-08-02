@@ -6,7 +6,9 @@ class BadgesController < ApplicationController
   def create
     @submit_badge_form = SubmitBadgeForm.new(submit_badge_form_params)
 
-    if @submit_badge_form.save
+    @badge = @submit_badge_form.save
+
+    if @badge.present?
       render :create
     else
       render :new

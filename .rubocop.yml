@@ -41,6 +41,11 @@ Layout/ExtraSpacing:
 Layout/IndentationStyle:
   IndentationWidth: 2
 
+# == Lint == #
+
+Lint/MissingSuper:
+  Enabled: false
+
 # == Style == #
 Style/SymbolArray:
   EnforcedStyle: brackets
