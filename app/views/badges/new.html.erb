@@ -1,0 +1,24 @@
+<h2>Submit badge</h2>
+
+<%= form_with model: @submit_badge_form, url: badges_path, local: true do |f| %>
+  <%= render "shared/forms/error_messages", resource: @submit_badge_form %>
+
+  <div>
+    <%= f.date_field :issue_date, as: :date %>
+  </div>
+
+  <br/>
+  <div>
+    <%= f.text_field :recipent_name, placeholder: "Badge Recipent name" %>
+  </div>
+
+  <br/>
+  <div>
+    <%= f.text_field :uuid, placeholder: "Badge UUID" %>
+  </div>
+
+  <br/>
+  <div>
+    <%= f.submit 'Submit to Chainpoint' %>
+  </div>
+<% end %>
