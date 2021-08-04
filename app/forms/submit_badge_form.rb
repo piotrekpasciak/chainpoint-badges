@@ -48,6 +48,7 @@ class SubmitBadgeForm
   def create_badge!(new_badge, chainpoint_data)
     new_badge.metadata = chainpoint_data['meta']
     new_badge.proof_id = chainpoint_data['hashes'][0]['proof_id']
+
     new_badge.save!
 
     new_badge
