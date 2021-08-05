@@ -11,8 +11,24 @@ describe SubmitBadgeForm do
         }
       end
 
-      it 'returns true' do
-        expect(subject.save).to eq true
+      context 'when Chainpoint API returns success' do
+        it 'returns true' do
+          result = VCR.use_cassette('chainpoint_api/hashes/create/success') do
+            subject.save
+          end
+
+          expect(result).to be_truthy
+        end
+      end
+
+      context 'when Chainpoint API returns failure' do
+        it 'returns true' do
+          result = VCR.use_cassette('chainpoint_api/hashes/create/failure') do
+            subject.save
+          end
+
+          expect(result).to eq false
+        end
       end
     end
 

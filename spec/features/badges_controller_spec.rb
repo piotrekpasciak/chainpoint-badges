@@ -30,13 +30,15 @@ describe 'BadgesController' do
 
         fill_in 'submit_badge_form_issue_date', with: '21/08/2021'
         fill_in 'submit_badge_form_recipient_name', with: 'Jhon'
-        fill_in 'submit_badge_form_uuid', with: 'Ia8254e2f-6f05-4ee4-b038-2997553f8a94'
+        fill_in 'submit_badge_form_uuid', with: 'a8254e2f-6f05-4ee4-b038-2997553f8a94'
 
-        click_on 'Submit to Chainpoint'
+        VCR.use_cassette('chainpoint_api/hashes/create/success') do
+          click_on 'Submit to Chainpoint'
+        end
 
         expect(page).to have_http_status(:ok)
         expect(page).to have_current_path(badges_path)
-        expect(page).to have_content('Badge submitted successfully!')
+        expect(page).to have_content('Badge submitted!')
       end
     end
   end

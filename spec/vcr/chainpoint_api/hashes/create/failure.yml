@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://3.136.178.15/hashes
+    body:
+      encoding: UTF-8
+      string: '{"hashes":["INVALID_HASH"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Server:
+      - chainpoint-node
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 04 Aug 2021 18:36:00 GMT
+      Connection:
+      - keep-alive
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code":"InvalidArgument","message":"invalid JSON body, invalid hashes
+        present"}'
+  recorded_at: Wed, 04 Aug 2021 18:36:00 GMT
+recorded_with: VCR 6.0.0
